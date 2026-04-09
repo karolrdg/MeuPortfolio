@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Rye&display=swap');
+
+@theme {
+  --color-rdr-red: #911313;
+  --color-rdr-beige: #d0b393;
+  --color-rdr-offwhite: #f4e7d3;
+  --color-rdr-black: #0a0a0a;
+
+  --font-western: "Rye", serif;
+  --font-body: "Playfair Display", serif;
+
+  --animate-pulse-slow: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@utility rdr-border {
+  border-width: 15px;
+  border-style: solid;
+  border-image: url('/img/box.png') 40 stretch;
+}
+
+@utility rdr-border-hover {
+  border-image: url('/img/border_hover.png') 40 stretch;
+}
+
+body {
+  @apply antialiased selection:bg-rdr-red selection:text-white;
+  cursor: url('https://cur.cursors-4u.net/games/gam-4/gam373.cur'), auto;
+}
+
+/* Scrollbar estilo Red Dead */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-rdr-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-rdr-red/50 hover:bg-rdr-red;
+}
