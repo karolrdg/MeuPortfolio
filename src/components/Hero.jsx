@@ -8,8 +8,10 @@ export default function Hero() {
             id="home"
             className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-transparent"
         >
+            {/* Camada de Overlay */}
             <div className="absolute inset-0 bg-black/50 z-0"></div>
 
+            {/* Ilustração de Fundo */}
             <div className="absolute inset-0 z-10 pointer-events-none opacity-20 mix-blend-screen">
                 <img
                     src="/img/feature2.jpg"
@@ -32,9 +34,10 @@ export default function Hero() {
                         transition={{ delay: 0.3, duration: 0.6 }}
                         className="mb-8"
                     >
+                        {/* FOTO: Colorida (sem grayscale), Redonda (rounded-full) e com Sombra */}
                         <img
-                            src="/img/Gemini_Generated_Image_wfg4xiwfg4xiwfg4.png"
-                            className="w-48 h-48 md:w-64 md:h-64 border-2 border-[#941313] object-cover grayscale brightness-110 contrast-125 shadow-2xl"
+                            src="/img/20200525_220805_764_mr1591237115720.jpg"
+                            className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-[#941313] object-cover aspect-square brightness-110 contrast-125 shadow-[0_0_40px_rgba(148,19,19,0.4)] transition-all duration-500 hover:scale-105 hover:border-white"
                             alt="Karoline Rodrigues"
                         />
                     </motion.div>
@@ -83,6 +86,7 @@ export default function Hero() {
                     </motion.div>
                 </motion.div>
 
+                {/* Imagem Principal Flutuante */}
                 <motion.div
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}

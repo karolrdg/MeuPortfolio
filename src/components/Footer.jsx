@@ -12,7 +12,7 @@ export default function Footer() {
                     {/* Banner do Catálogo Wheeler, Rawson and Co. */}
                     <div className="w-full max-w-5xl mx-auto mb-12 border-2 border-white/5 bg-black/40 backdrop-blur-sm p-1 shadow-2xl">
                         <img
-                            src="/img/footer.jpg"
+                            src="/img/footer.png"
                             className="w-full h-auto grayscale brightness-125 contrast-125"
                             alt="Wheeler, Rawson and Co. Catalogue"
                         />
