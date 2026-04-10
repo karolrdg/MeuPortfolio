@@ -5,20 +5,20 @@ const projects = [
     {
         title: "Escritório de Advocacia",
         img: "/img/snipe.png",
-        desc: "Desenvolvimento de plataforma jurídica profissional com React e Tailwind CSS.",
+        desc: "Desenvolvimento de plataforma jurídica profissional.",
         link: "https://ricardopedroadvocacia.com.br/"
     },
     {
         title: "TimeLeap",
         img: "/img/watch.png",
-        desc: "Bot de Discord especializado em recuperação e envio aleatório de mensagens históricas.",
-        link: "https://github.com/marrrkkk/TimeLeap"
+        desc: "Sistema de gerenciamento de farmácia para o curso do Senai.",
+        link: "https://sante-farmacias.vercel.app/"
     },
     {
-        title: "Portfolio",
+        title: "Portfólio",
         img: "/img/icon.png",
         desc: "Interface imersiva inspirada no catálogo Wheeler Rawson & Co. de 1899.",
-        link: "https://github.com/marrrkkk/MarkLouie"
+        link: "https://github.com/karolrdg"
     }
 ];
 
