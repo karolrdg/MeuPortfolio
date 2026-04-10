@@ -9,8 +9,8 @@ const projects = [
         link: "https://ricardopedroadvocacia.com.br/"
     },
     {
-        title: "TimeLeap",
-        img: "/img/watch.png",
+        title: "Farmácia",
+        img: "/img/eecfdca0b8178bc8f9546b67502415c7210952d6.png",
         desc: "Sistema de gerenciamento de farmácia para o curso do Senai.",
         link: "https://sante-farmacias.vercel.app/"
     },

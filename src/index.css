@@ -39,6 +39,25 @@
   cursor: url('/img/cursor-gun.png') 16 16, auto !important;
 }
 
+/* Isso garante que o cursor personalizado SÓ funcione em telas maiores que 1024px */
+@media (min-width: 1024px) {
+  .cursor-arma {
+    cursor: url('/img/cursor-gun.png') 16 16, auto !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .cursor-arma {
+    cursor: default !important;
+  }
+  
+  .mira-seguidora {
+    display: none !important;
+  }
+}
+
+
+
 /* Scrollbar estilo Red Dead */
 ::-webkit-scrollbar {
   width: 8px;

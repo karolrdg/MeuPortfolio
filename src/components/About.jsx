@@ -39,7 +39,7 @@ export default function About() {
 
                             <motion.div whileHover={{ x: 10 }} className="flex items-start gap-8 group">
                                 <div className="bg-white p-5 shadow-[5px_5px_0px_0px_#941313] group-hover:bg-[#941313] group-hover:shadow-white transition-all duration-300">
-                                    <img src="/img/male.png" className="w-12 h-12 invert brightness-0" alt="Ícone" />
+                                    <img src="/img/female_clothing.png" className="w-12 h-12 invert brightness-0" alt="Ícone" />
                                 </div>
                                 <div>
                                     <span className="font-western text-[12px] text-[#941313] uppercase tracking-[0.3em] block font-bold mb-1">Identificação</span>
@@ -67,7 +67,7 @@ export default function About() {
                             <div className="pt-10 border-t-4 border-white/20">
                                 <span className="font-western text-[12px] text-[#941313] uppercase tracking-[0.3em] block font-bold mb-4">Especialidade</span>
                                 <p className="font-body text-3xl text-white font-bold uppercase italic leading-tight max-w-md border-l-4 border-[#941313] pl-6">
-                                    Análise e Desenvolvimento de Sistemas
+                                    Cursando Análise e Desenvolvimento de Sistemas
                                 </p>
                             </div>
                         </div>
