@@ -36,9 +36,9 @@ export default function CursorToggle() {
             <div className="flex bg-black/80 backdrop-blur-md border border-white/20 p-1.5 rounded-sm shadow-[0_0_30px_rgba(0,0,0,0.5)]">
                 <button
                     onClick={() => setCursorType('normal')}
-                    className={`px-6 py-2.5 text-[12px] md:text-[14px] font-western uppercase tracking-widest transition-all duration-300 ${cursorType === 'normal'
-                            ? 'bg-white text-black'
-                            : 'text-white/40 hover:text-white'
+                    className={`px-6 py-2.5 text-[12px] md:text-[14px] font-western uppercase cursor-pointer tracking-widest transition-all duration-300 ${cursorType === 'normal'
+                        ? 'bg-white text-black'
+                        : 'text-white/40 hover:text-white'
                         }`}
                 >
                     Sistema
@@ -46,9 +46,9 @@ export default function CursorToggle() {
 
                 <button
                     onClick={handleOutlawClick}
-                    className={`px-6 py-2.5 text-[12px] md:text-[14px] font-western uppercase tracking-widest transition-all duration-300 ${cursorType === 'arma'
-                            ? 'bg-[#941313] text-white'
-                            : 'text-white/40 hover:text-white'
+                    className={`px-6 py-2.5 text-[12px] md:text-[14px] font-western cursor-pointer uppercase tracking-widest transition-all duration-300 ${cursorType === 'arma'
+                        ? 'bg-[#941313] text-white'
+                        : 'text-white/40 hover:text-white'
                         }`}
                 >
                     Outlaw

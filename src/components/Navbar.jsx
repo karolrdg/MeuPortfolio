@@ -5,7 +5,6 @@ export default function Navbar() {
         <header className="fixed top-0 left-0 w-full z-[100]">
             <nav className="bg-[#941313] px-6 py-2 md:px-12 flex justify-between items-center border-b border-black/20 shadow-2xl">
 
-                {/* Lado Esquerdo: Logo */}
                 <a href="/" className="flex items-center shrink-0">
                     <img
                         src="/img/logo.png"
@@ -28,7 +27,7 @@ export default function Navbar() {
                 </ul>
 
                 {/* Lado Direito: Status HUD Estilo RDR2 */}
-                <div className="flex items-center gap-4 md:gap-6 bg-black/20 px-4 py-1 rounded-sm border border-white/10 backdrop-blur-sm">
+                <div className="flex items-center gap-4 md:gap-6 px-4 py-1 rounded-sm border border-white/10 backdrop-blur-sm">
 
                     {/* Blue Tokens */}
                     <div className="flex items-center gap-1.5">
