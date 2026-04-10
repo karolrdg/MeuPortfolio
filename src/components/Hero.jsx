@@ -43,9 +43,14 @@ export default function Hero() {
                     </motion.div>
 
                     <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5, duration: 0.6 }}
+                        initial={{ opacity: 0, scale: 3, filter: "blur(10px)" }}
+                        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 200,
+                            damping: 10,
+                            delay: 0.5
+                        }}
                         className="font-western text-6xl md:text-8xl text-white mb-4 leading-none uppercase tracking-tighter"
                     >
                         Karoline <br />

@@ -24,9 +24,19 @@
   border-image: url('/img/border_hover.png') 40 stretch;
 }
 
-body {
-  @apply antialiased selection:bg-rdr-red selection:text-white;
-  cursor: url('https://cur.cursors-4u.net/games/gam-4/gam373.cur'), auto;
+@layer base {
+  body {
+    /* REMOVIDO O CURSOR DAQUI PARA VOLTAR AO PADRÃO DO SISTEMA */
+    @apply bg-rdr-offwhite antialiased;
+  }
+}
+
+/* O CURSOR DE ARMA SÓ APARECE SE ESTA CLASSE ESTIVER ATIVA */
+.cursor-arma, 
+.cursor-arma a, 
+.cursor-arma button,
+.cursor-arma [role="button"] {
+  cursor: url('/img/cursor-gun.png') 16 16, auto !important;
 }
 
 /* Scrollbar estilo Red Dead */
