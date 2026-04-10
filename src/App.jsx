@@ -15,11 +15,11 @@ function App() {
       <main className="pt-[100px] md:pt-[130px]">
         <Hero />
 
-        <div className="h-10 bg-[url('/img/bgRip.png')] bg-repeat-x w-full opacity-40 my-8 rotate-180 invert brightness-0"></div>
+
 
         <About />
 
-        <div className="h-10 bg-[url('/img/bgRip.png')] bg-repeat-x w-full opacity-40 my-8 invert brightness-0"></div>
+
 
         <Projects />
       </main>
