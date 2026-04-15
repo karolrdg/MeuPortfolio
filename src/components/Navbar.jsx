@@ -65,7 +65,7 @@ export default function Navbar() {
                 </div>
 
                 <button
-                    aria-label="Abrir menu"
+                    aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     className="lg:hidden ml-2 w-10 h-10 flex items-center justify-center rounded-sm text-white z-[1002]"
                 >
