@@ -40,7 +40,6 @@ export default function BackToTop() {
                         {/* Efeito de brilho suave ao fundo */}
                         <div className="absolute inset-0 bg-[#941313]/0 group-hover:bg-[#941313]/20 blur-xl transition-all duration-500 rounded-full"></div>
 
-                        {/* Sua imagem PonyUp */}
                         <motion.img
                             src="/img/PonyUp.webp"
                             alt="Voltar ao topo"
