@@ -6,7 +6,7 @@ export default function CursorToggle() {
     const playSound = () => {
         const audio = new Audio('/sounds/pistol-shot.mp3');
         audio.volume = 0.3;
-        audio.play().catch(err => { });
+        audio.play().catch(() => { });
     };
 
     useEffect(() => {

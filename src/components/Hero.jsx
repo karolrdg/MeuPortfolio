@@ -1,120 +1,163 @@
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { motion as Motion } from 'framer-motion';
+
+const whatsappLink = 'https://wa.me/5548998135788';
 
 export default function Hero() {
     return (
         <section
             id="home"
-            className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-transparent"
+            className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-transparent"
         >
-            {/* Camada de Overlay */}
-            <div className="absolute inset-0 bg-black/50 z-0"></div>
+            <div className="absolute inset-0 z-0 bg-black/60" />
 
-            {/* Ilustração de Fundo */}
-            <div className="absolute inset-0 z-10 pointer-events-none opacity-20 mix-blend-screen">
+            <div className="pointer-events-none absolute inset-0 z-10 opacity-30 mix-blend-screen">
                 <img
-                    src="/img/feature2.jpg"
-                    className="w-full h-full object-cover grayscale"
+                    src="/img/feature2.png"
+                    className="h-full w-full object-cover grayscale contrast-125"
                     alt=""
                 />
             </div>
 
-            <div className="container mx-auto px-4 pt-32 pb-20 relative z-20 flex flex-col lg:flex-row items-center justify-between gap-12">
-
-                <motion.div
+            <div className="container relative z-20 mx-auto flex flex-col items-center justify-between gap-12 px-4 pb-20 pt-32 lg:flex-row">
+                <Motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left"
+                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                    className="flex w-full flex-col items-center text-center lg:w-1/2 lg:items-start lg:text-left"
                 >
-                    <motion.div
+                    <Motion.div
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.6 }}
                         className="mb-8"
                     >
-                        {/* FOTO: Colorida (sem grayscale), Redonda (rounded-full) e com Sombra */}
                         <img
                             src="/img/20200525_220805_764_mr1591237115720.jpg"
-                            className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-[#941313] object-cover aspect-square brightness-110 contrast-125 shadow-[0_0_40px_rgba(148,19,19,0.4)] transition-all duration-500 hover:scale-105 hover:border-white"
+                            className="aspect-square h-48 w-48 border-4 border-white object-cover brightness-110 contrast-125 shadow-[12px_12px_0px_0px_#941313] transition-all duration-500 hover:-translate-y-1 hover:shadow-[16px_16px_0px_0px_#941313] md:h-64 md:w-64"
                             alt="Karoline Rodrigues"
                         />
-                    </motion.div>
+                    </Motion.div>
 
-                    <motion.h1
-                        initial={{ opacity: 0, scale: 3, filter: "blur(10px)" }}
-                        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                    <Motion.h1
+                        initial={{ opacity: 0, scale: 3, filter: 'blur(10px)' }}
+                        animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                         transition={{
-                            type: "spring",
+                            type: 'spring',
                             stiffness: 200,
                             damping: 10,
-                            delay: 0.5
+                            delay: 0.5,
                         }}
-                        className="font-western text-6xl md:text-8xl text-white mb-4 leading-none uppercase tracking-tighter"
+                        className="mb-4 font-western text-6xl uppercase leading-none tracking-tighter text-white md:text-8xl"
                     >
                         Karoline <br />
                         <span className="text-[#941313] drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">Rodrigues</span>
-                    </motion.h1>
+                    </Motion.h1>
 
-                    <motion.div
+                    <Motion.div
                         initial={{ width: 0, opacity: 0 }}
-                        animate={{ width: "100%", opacity: 1 }}
+                        animate={{ width: '100%', opacity: 1 }}
                         transition={{ delay: 0.8, duration: 0.8 }}
-                        className="flex items-center gap-4 mb-10 overflow-hidden whitespace-nowrap"
+                        className="mb-10 flex items-center gap-4 overflow-hidden whitespace-nowrap"
                     >
-                        <div className="h-[1px] min-w-[48px] bg-[#941313]"></div>
-                        <p className="font-western text-white text-sm tracking-[0.5em] uppercase font-bold">
-                            Full Stack Outlaw
+                        <div className="h-[2px] min-w-[48px] bg-[#941313]" />
+                        <p className="font-western text-sm font-bold uppercase tracking-[0.5em] text-white">
+                            Desenvolvedora Full Stack
                         </p>
-                        <div className="h-[1px] min-w-[48px] bg-[#941313]"></div>
-                    </motion.div>
+                        <div className="h-[2px] min-w-[48px] bg-[#941313]" />
+                    </Motion.div>
 
-                    <motion.div
+                    <Motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 1.2, duration: 0.5 }}
-                        className="flex gap-4"
+                        transition={{ delay: 1, duration: 0.5 }}
+                        className="mb-10 max-w-xl border-l-4 border-[#941313] bg-black/35 py-2 pl-5 font-body text-lg leading-relaxed text-white/85"
                     >
-                        <a href="https://github.com/karolrdg" target="_blank" rel="noreferrer"
-                            className="group px-8 py-3 bg-[#941313] text-white transition-all hover:bg-white hover:text-black font-western text-xs uppercase tracking-widest font-bold shadow-lg">
-                            <div className="flex items-center gap-3">
-                                <FaGithub size={18} /> Github
-                            </div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/karoline-rodrigues-dev/" target="_blank" rel="noreferrer"
-                            className="group px-8 py-3 bg-transparent text-white border-2 border-white/20 transition-all hover:border-[#941313] hover:text-[#941313] font-western text-xs uppercase tracking-widest font-bold">
-                            <div className="flex items-center gap-3">
-                                <FaLinkedin size={18} /> LinkedIn
-                            </div>
-                        </a>
-                    </motion.div>
-                </motion.div>
+                        Crio interfaces com personalidade, foco em experiência e código limpo.
+                        Este portfólio reúne projetos, estudos e a forma como transformo ideia em produto.
+                    </Motion.p>
 
-                {/* Imagem Principal Flutuante */}
-                <motion.div
+                    <Motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.2, duration: 0.5 }}
+                        className="w-full max-w-xl border-4 border-white bg-black shadow-[14px_14px_0px_0px_#941313]"
+                    >
+                        <div className="flex items-center justify-between gap-3 border-b-4 border-white bg-[#941313] px-5 py-3">
+                            <span className="font-western text-[11px] uppercase tracking-[0.35em] text-white">
+                                Contato rápido
+                            </span>
+                            <span className="font-western text-[10px] uppercase tracking-[0.25em] text-black/60">
+                                Online
+                            </span>
+                        </div>
+
+                        <div className="grid gap-3 p-4">
+                            <a
+                                href={whatsappLink}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="group relative overflow-hidden border-2 border-white bg-white px-5 py-4 text-black shadow-[6px_6px_0px_0px_#941313] transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-400 hover:shadow-[8px_8px_0px_0px_#ffffff]"
+                            >
+                                <div className="absolute inset-y-0 right-0 w-24 bg-[#941313]/10 transition-all group-hover:bg-black/10" />
+                                <div className="relative flex items-center justify-between gap-4">
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 items-center justify-center border-2 border-black bg-emerald-400 text-black">
+                                            <FaWhatsapp size={25} />
+                                        </div>
+                                        <div className="text-left">
+                                            <p className="font-western text-2xl uppercase leading-none tracking-[0.12em]">WhatsApp</p>
+                                            <p className="mt-1 font-body text-sm font-bold italic text-black/70">(48) 99813-5788</p>
+                                        </div>
+                                    </div>
+                                    <span className="hidden font-western text-2xl text-[#941313] sm:block">{'>>'}</span>
+                                </div>
+                            </a>
+
+                            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                                <a
+                                    href="https://github.com/karolrdg"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="flex items-center justify-center gap-3 border-2 border-white bg-[#941313] px-4 py-3 font-western text-sm font-bold uppercase tracking-[0.22em] text-white transition-all hover:-translate-y-1 hover:bg-black"
+                                >
+                                    <FaGithub size={20} />
+                                    GitHub
+                                </a>
+
+                                <a
+                                    href="https://www.linkedin.com/in/karoline-rodrigues-dev/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="flex items-center justify-center gap-3 border-2 border-white bg-black px-4 py-3 font-western text-sm font-bold uppercase tracking-[0.22em] text-white transition-all hover:-translate-y-1 hover:bg-white hover:text-black"
+                                >
+                                    <FaLinkedin size={20} />
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </Motion.div>
+                </Motion.div>
+
+                <Motion.div
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-                    className="relative flex-1 w-full max-w-2xl"
+                    transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
+                    className="relative w-full max-w-2xl flex-1"
                 >
-                    <motion.img
-                        animate={{
-                            y: [0, -15, 0],
-                        }}
-                        transition={{
-                            duration: 4,
-                            repeat: Infinity,
-                            ease: "easeInOut"
-                        }}
+                    <div className="absolute -left-4 top-8 h-28 w-28 border-4 border-[#941313] bg-black/60" />
+                    <Motion.img
+                        animate={{ y: [0, -15, 0] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                         src="/img/home.png"
-                        className="w-full relative z-10 contrast-125 saturate-[0.8] drop-shadow-[0_0_80px_rgba(148,19,19,0.2)]"
-                        alt="Visual"
+                        className="relative z-10 w-full contrast-125 saturate-100 drop-shadow-[0_0_80px_rgba(148,19,19,0.28)]"
+                        alt="Composição visual do portfólio"
                     />
-                </motion.div>
+                </Motion.div>
             </div>
 
-            <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black via-transparent to-transparent z-30"></div>
+            <div className="absolute bottom-0 left-0 z-30 h-40 w-full bg-gradient-to-t from-black via-transparent to-transparent" />
         </section>
     );
 }

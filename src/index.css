@@ -26,20 +26,17 @@
 
 @layer base {
   body {
-    /* REMOVIDO O CURSOR DAQUI PARA VOLTAR AO PADRÃO DO SISTEMA */
     @apply bg-rdr-offwhite antialiased;
   }
 }
 
-/* O CURSOR DE ARMA SÓ APARECE SE ESTA CLASSE ESTIVER ATIVA */
-.cursor-arma, 
-.cursor-arma a, 
+.cursor-arma,
+.cursor-arma a,
 .cursor-arma button,
 .cursor-arma [role="button"] {
   cursor: url('/img/cursor-gun.png') 16 16, auto !important;
 }
 
-/* Isso garante que o cursor personalizado SÓ funcione em telas maiores que 1024px */
 @media (min-width: 1024px) {
   .cursor-arma {
     cursor: url('/img/cursor-gun.png') 16 16, auto !important;
@@ -50,15 +47,12 @@
   .cursor-arma {
     cursor: default !important;
   }
-  
+
   .mira-seguidora {
     display: none !important;
   }
 }
 
-
-
-/* Scrollbar estilo Red Dead */
 ::-webkit-scrollbar {
   width: 8px;
 }

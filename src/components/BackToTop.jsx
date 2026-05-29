@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 
 export default function BackToTop() {
     const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +27,7 @@ export default function BackToTop() {
     return (
         <AnimatePresence>
             {isVisible && (
-                <motion.button
+                <Motion.button
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.5 }}
@@ -40,7 +40,7 @@ export default function BackToTop() {
                         {/* Efeito de brilho suave ao fundo */}
                         <div className="absolute inset-0 bg-[#941313]/0 group-hover:bg-[#941313]/20 blur-xl transition-all duration-500 rounded-full"></div>
 
-                        <motion.img
+                        <Motion.img
                             src="/img/PonyUp.webp"
                             alt="Voltar ao topo"
                             className="w-full h-full cursor-pointer object-contain brightness-90 contrast-125 group-hover:brightness-110 group-hover:drop-shadow-[0_0_10px_#941313] transition-all duration-300"
@@ -48,7 +48,7 @@ export default function BackToTop() {
                             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                         />
                     </div>
-                </motion.button>
+                </Motion.button>
             )}
         </AnimatePresence>
     );
