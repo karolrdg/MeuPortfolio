@@ -1,4 +1,7 @@
 import React from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
+
+const whatsappLink = 'https://api.whatsapp.com/send?phone=5548998135788';
 
 export default function Footer() {
     return (
@@ -61,7 +64,20 @@ export default function Footer() {
                                 Aberta para oportunidades
                             </p>
 
-                            <p className="mt-2 font-western text-[10px] font-bold uppercase tracking-widest text-white/30">
+                            <a
+                                href={whatsappLink}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="Chamar Karoline Rodrigues no WhatsApp"
+                                className="standard-link-cursor group mt-5 inline-flex items-center gap-3 border-2 border-white bg-[#941313] px-4 py-3 font-western text-[11px] uppercase tracking-[0.2em] text-white shadow-[5px_5px_0px_0px_rgba(255,255,255,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-black"
+                            >
+                                <span className="flex h-8 w-8 items-center justify-center border border-current bg-black/20 transition-all group-hover:bg-emerald-400 group-hover:text-black">
+                                    <FaWhatsapp size={18} />
+                                </span>
+                                WhatsApp
+                            </a>
+
+                            <p className="mt-3 font-western text-[10px] font-bold uppercase tracking-widest text-white/30">
                                 Portfólio atualizado em 2026
                             </p>
                         </div>
@@ -75,7 +91,7 @@ export default function Footer() {
 
                     <div className="text-center">
                         <p className="font-body text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">
-                            Karoline Rodrigues • Portfólio pessoal • 2026
+                            Karoline Rodrigues - Portfólio pessoal - 2026
                         </p>
                     </div>
 

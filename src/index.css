@@ -37,6 +37,11 @@
   cursor: url('/img/cursor-gun.png') 16 16, auto !important;
 }
 
+.cursor-arma .standard-link-cursor,
+.cursor-arma a.standard-link-cursor {
+  cursor: pointer !important;
+}
+
 @media (min-width: 1024px) {
   .cursor-arma {
     cursor: url('/img/cursor-gun.png') 16 16, auto !important;

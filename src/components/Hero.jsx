@@ -1,8 +1,6 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { motion as Motion } from 'framer-motion';
-
-const whatsappLink = 'https://wa.me/5548998135788';
 
 export default function Hero() {
     return (
@@ -78,11 +76,12 @@ export default function Hero() {
                         Este portfólio reúne projetos, estudos e a forma como transformo ideia em produto.
                     </Motion.p>
 
+                    {/* Card de Contato - Z-Index Isolado */}
                     <Motion.div
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.2, duration: 0.5 }}
-                        className="w-full max-w-xl border-4 border-white bg-black shadow-[14px_14px_0px_0px_#941313]"
+                        className="relative z-30 w-full max-w-xl border-4 border-white bg-black shadow-[14px_14px_0px_0px_#941313]"
                     >
                         <div className="flex items-center justify-between gap-3 border-b-4 border-white bg-[#941313] px-5 py-3">
                             <span className="font-western text-[11px] uppercase tracking-[0.35em] text-white">
@@ -94,47 +93,62 @@ export default function Hero() {
                         </div>
 
                         <div className="grid gap-3 p-4">
-                            <a
-                                href={whatsappLink}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="group relative overflow-hidden border-2 border-white bg-white px-5 py-4 text-black shadow-[6px_6px_0px_0px_#941313] transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-400 hover:shadow-[8px_8px_0px_0px_#ffffff]"
-                            >
-                                <div className="absolute inset-y-0 right-0 w-24 bg-[#941313]/10 transition-all group-hover:bg-black/10" />
-                                <div className="relative flex items-center justify-between gap-4">
-                                    <div className="flex items-center gap-4">
-                                        <div className="flex h-12 w-12 items-center justify-center border-2 border-black bg-emerald-400 text-black">
-                                            <FaWhatsapp size={25} />
-                                        </div>
-                                        <div className="text-left">
-                                            <p className="font-western text-2xl uppercase leading-none tracking-[0.12em]">WhatsApp</p>
-                                            <p className="mt-1 font-body text-sm font-bold italic text-black/70">(48) 99813-5788</p>
-                                        </div>
-                                    </div>
-                                    <span className="hidden font-western text-2xl text-[#941313] sm:block">{'>>'}</span>
-                                </div>
-                            </a>
-
-                            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                                <a
+                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                                {/* GitHub */}
+                                <Motion.a
                                     href="https://github.com/karolrdg"
                                     target="_blank"
-                                    rel="noreferrer"
-                                    className="flex items-center justify-center gap-3 border-2 border-white bg-[#941313] px-4 py-3 font-western text-sm font-bold uppercase tracking-[0.22em] text-white transition-all hover:-translate-y-1 hover:bg-black"
+                                    rel="noopener noreferrer"
+                                    aria-label="Abrir GitHub de Karoline Rodrigues"
+                                    whileHover={{ y: -6, scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    transition={{ type: 'spring', stiffness: 400, damping: 22 }}
+                                    className="group relative block cursor-pointer select-none overflow-hidden border-2 border-white bg-[#941313] px-5 py-5 text-white shadow-[6px_6px_0px_0px_#ffffff] transition-colors duration-300 hover:bg-black"
                                 >
-                                    <FaGithub size={20} />
-                                    GitHub
-                                </a>
+                                    {/* pointer-events-none adicionado aqui para não barrar o clique */}
+                                    <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-black/15 transition-all group-hover:w-28 group-hover:bg-white/10" />
 
-                                <a
+                                    <div className="relative flex items-center justify-between gap-4">
+                                        <div className="flex items-center gap-4">
+                                            <span className="flex h-12 w-12 items-center justify-center border-2 border-white bg-black/25 transition-all group-hover:bg-white group-hover:text-black">
+                                                <FaGithub size={24} />
+                                            </span>
+                                            <div className="text-left">
+                                                <p className="font-western text-xl uppercase leading-none tracking-[0.14em]">GitHub</p>
+                                                <p className="mt-1 font-body text-sm italic text-white/75">Projetos e código</p>
+                                            </div>
+                                        </div>
+                                        <span className="font-western text-xl text-white/70 transition-transform group-hover:translate-x-1">{'>>'}</span>
+                                    </div>
+                                </Motion.a>
+
+                                {/* LinkedIn */}
+                                <Motion.a
                                     href="https://www.linkedin.com/in/karoline-rodrigues-dev/"
                                     target="_blank"
-                                    rel="noreferrer"
-                                    className="flex items-center justify-center gap-3 border-2 border-white bg-black px-4 py-3 font-western text-sm font-bold uppercase tracking-[0.22em] text-white transition-all hover:-translate-y-1 hover:bg-white hover:text-black"
+                                    rel="noopener noreferrer"
+                                    aria-label="Abrir LinkedIn de Karoline Rodrigues"
+                                    whileHover={{ y: -6, scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    transition={{ type: 'spring', stiffness: 400, damping: 22 }}
+                                    className="group relative block cursor-pointer select-none overflow-hidden border-2 border-white bg-black px-5 py-5 text-white shadow-[6px_6px_0px_0px_#941313] transition-colors duration-300 hover:bg-white hover:text-black"
                                 >
-                                    <FaLinkedin size={20} />
-                                    LinkedIn
-                                </a>
+                                    {/* pointer-events-none adicionado aqui para não barrar o clique */}
+                                    <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-[#941313]/20 transition-all group-hover:w-28 group-hover:bg-[#941313]/10" />
+
+                                    <div className="relative flex items-center justify-between gap-4">
+                                        <div className="flex items-center gap-4">
+                                            <span className="flex h-12 w-12 items-center justify-center border-2 border-white bg-[#941313] text-white transition-all group-hover:border-black">
+                                                <FaLinkedin size={24} />
+                                            </span>
+                                            <div className="text-left">
+                                                <p className="font-western text-xl uppercase leading-none tracking-[0.14em]">LinkedIn</p>
+                                                <p className="mt-1 font-body text-sm italic text-current/75">Perfil profissional</p>
+                                            </div>
+                                        </div>
+                                        <span className="font-western text-xl text-current/70 transition-transform group-hover:translate-x-1">{'>>'}</span>
+                                    </div>
+                                </Motion.a>
                             </div>
                         </div>
                     </Motion.div>

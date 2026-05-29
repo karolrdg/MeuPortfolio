@@ -42,7 +42,7 @@ export default function About() {
                                 Dossiê de Campo
                             </h2>
                             <p className="mt-5 max-w-3xl font-body text-lg font-bold italic leading-relaxed text-white/75">
-                                Desenvolvedora em formação, com foco em front-end, experiência digital e interfaces
+                                Desenvolvedora em formação, experiência digital e interfaces
                                 com identidade visual forte.
                             </p>
                         </div>
