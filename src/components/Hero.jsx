@@ -72,7 +72,7 @@ export default function Hero() {
                         transition={{ delay: 1, duration: 0.5 }}
                         className="mb-10 max-w-xl border-l-4 border-[#941313] bg-black/35 py-2 pl-5 font-body text-lg leading-relaxed text-white/85"
                     >
-                        Crio interfaces com personalidade, foco em experiência e código limpo.
+                        Crio sistemas com personalidade, foco em experiência e código limpo.
                         Este portfólio reúne projetos, estudos e a forma como transformo ideia em produto.
                     </Motion.p>
 
