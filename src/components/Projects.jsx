@@ -15,10 +15,10 @@ const projects = [
         link: 'https://sante-farmacias.vercel.app/',
     },
     {
-        title: 'Portfólio Autoral',
+        title: 'Sistema de Prospecção de Clientes',
         img: '/img/icon.png',
-        desc: 'Projeto com direção visual inspirada em catálogos clássicos e interfaces com identidade forte.',
-        link: 'https://github.com/karolrdg',
+        desc: 'O ProspectCRM é uma plataforma web completa para prospecção comercial e gerenciamento de empresas (leads).',
+        link: 'https://github.com/karolrdg/SistemaProspeccao',
     },
 ];
 
@@ -52,9 +52,8 @@ export default function Projects() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className={`group flex flex-col items-center p-10 text-center transition-all duration-500 hover:bg-white/5 ${
-                                index !== projects.length - 1 ? 'border-b-4 border-white/20 md:border-b-0 md:border-r-4' : ''
-                            }`}
+                            className={`group flex flex-col items-center p-10 text-center transition-all duration-500 hover:bg-white/5 ${index !== projects.length - 1 ? 'border-b-4 border-white/20 md:border-b-0 md:border-r-4' : ''
+                                }`}
                         >
                             <div className="relative mb-10 flex h-48 items-center justify-center">
                                 <Motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="relative z-10">
