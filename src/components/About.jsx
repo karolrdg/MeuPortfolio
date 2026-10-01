@@ -5,7 +5,7 @@ export default function About() {
     const [copied, setCopied] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const email = 'karolinerodrigues12@outlook.com';
-    const skills = ['React', 'UI/UX Design', 'Tailwind CSS', 'SQL', 'C#', 'Metodologias Ágeis'];
+    const skills = ['C#', '.NET', 'ASP.NET', 'UI/UX Design', 'React', 'Tailwind CSS', 'SQL SERVER', 'POSTGRES', 'Metodologias Ágeis'];
 
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth < 768);

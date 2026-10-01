@@ -9,10 +9,10 @@ const projects = [
         link: 'https://ricardopedroadvocacia.com.br/',
     },
     {
-        title: 'Sistema de Farmácia',
-        img: '/img/eecfdca0b8178bc8f9546b67502415c7210952d6.png',
-        desc: 'Aplicação acadêmica para gestão de estoque, fluxo de atendimento e organização operacional.',
-        link: 'https://sante-farmacias.vercel.app/',
+        title: 'AgroIA',
+        img: '/img/940bcedcf1d7b10c1debbd6692d6bdf47a685d0e.png',
+        desc: 'Plataforma de gestão agrícola em desenvolvimento, com foco em tecnologia, dados e inteligência artificial aplicada ao agronegócio.',
+        link: 'https://github.com/karolrdg/Agro.IA',
     },
     {
         title: 'Sistema de Prospecção de Clientes',
